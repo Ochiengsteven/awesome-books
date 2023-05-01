@@ -1,13 +1,16 @@
 // empty array to store the books
 let books = [];
+let nextId = 1;
 
 //  function to add a new book to the collection, with title and author
 function addBook(title, author) {
   const book = {
+    id: nextId,
     title,
     author,
   };
   books.push(book);
+  nextId += 1;
 }
 
 // function to display the books in the collection
@@ -21,18 +24,18 @@ function displayBooks() {
     const removeCell = row.insertCell();
     titleCell.innerText = book.title;
     authorCell.innerText = book.author;
-    removeCell.innerHTML = `<button onclick="removeBook('${book.title}')">Remove</button>`;
+    removeCell.innerHTML = `<button onclick="removeBook(${book.id})">Remove</button>`;
   });
 }
 
 // function to remove a book from the collection
-function removeBook(title) {
-  books = books.filter((book) => book.title !== title);
+function removeBook(id) {
+  books = books.filter((book) => book.id !== id);
   displayBooks();
 }
 
 // example usage
-removeBook('The Hobbit');
+removeBook(1);
 
 // Add an event listener to the form submit button to call the addBook()
 const form = document.querySelector('#add-book-form');
@@ -50,6 +53,7 @@ form.addEventListener('submit', (event) => {
 window.addEventListener('load', () => {
   if (localStorage.getItem('books')) {
     books = JSON.parse(localStorage.getItem('books'));
+    nextId = books.length + 1;
     displayBooks();
   }
 });
