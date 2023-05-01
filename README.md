@@ -31,7 +31,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 # Awesome Books Project <a name="about-project"></a>
+# 📖 Awesome Books Project <a name="about-project"></a>
 
 ***Awesome books*** is a simple website that displays a list of books and allows you to add and remove books from that list. Main objective is to implement data management in JavaScript. 
 
