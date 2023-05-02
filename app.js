@@ -1,5 +1,6 @@
 class Book {
-  constructor(title, author) {
+  constructor(id, title, author) {
+    this.id = id;
     this.title = title;
     this.author = author;
   }
@@ -17,7 +18,7 @@ const bookManager = {
     window.addEventListener('load', () => {
       if (localStorage.getItem('books')) {
         this.books = JSON.parse(localStorage.getItem('books')).map(
-          (book) => new Book(book.title, book.author),
+          (book) => new Book(book.id, book.title, book.author),
         );
         this.displayBooks();
       }
@@ -29,14 +30,15 @@ const bookManager = {
   addBook() {
     const titleInput = document.querySelector('#title-input');
     const authorInput = document.querySelector('#author-input');
-    const book = new Book(titleInput.value, authorInput.value);
+    const id = Date.now().toString(); // generate a unique ID
+    const book = new Book(id, titleInput.value, authorInput.value);
     this.books.push(book);
     this.displayBooks();
     titleInput.value = '';
     authorInput.value = '';
   },
-  removeBook(title) {
-    this.books = this.books.filter((book) => book.title !== title);
+  removeBook(id) {
+    this.books = this.books.filter((book) => book.id !== id);
     this.displayBooks();
   },
   displayBooks() {
@@ -47,7 +49,7 @@ const bookManager = {
       const removeCell = row.insertCell();
       const bookTitle = `${book.title} by ${book.author}`;
       titleCell.innerText = bookTitle;
-      removeCell.innerHTML = `<button onclick="bookManager.removeBook('${book.title}')">Remove</button>`;
+      removeCell.innerHTML = `<button onclick="bookManager.removeBook('${book.id}')">Remove</button>`;
     });
   },
 };
