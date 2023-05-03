@@ -16,7 +16,6 @@
       <li><a href="#contact-info">Contact Info</a></li>
     </ul>
   </nav>
-  
   <nav class="mobile-nav">
     <h1>Awesome Books</h1>
     <svg viewBox="0 0 100 80" width="40" height="40" class="svg-menu" id="svg-menu">
@@ -33,7 +32,7 @@
       </ul>
     </nav>
   </nav>
-  
+  <div id="time"></div>
   <main>
     <section id="books-list" class="content-section">
       <h2 class="title-text">All Awesome Books</h2>
@@ -47,7 +46,7 @@
       </table>
     </section>
     <section id="add-book-form" class="content-section hidden">
-      <h2>Add a New Book</h2>
+      <h2 id="inpt-text">Add a New Book</h2>
       <form id="book-form">
         <label for="title-input"></label>
         <input type="text" id="title-input" placeholder="Title" required>
@@ -75,5 +74,6 @@
   </main>
   <script src="mobile.js"></script>
   <script src="app.js"></script>
+  <script src="time.js"></script>
 </body>
 </html>
