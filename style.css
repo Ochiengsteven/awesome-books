@@ -194,11 +194,27 @@ footer p {
     display: none;
   }
 
+  form {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  label {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
   #add-book-form label {
     display: block;
     margin-bottom: 8px;
   }
-  
+
+  input[type="text"] {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
   #add-book-form input[type="text"] {
     display: block;
     width: 100%;
@@ -207,17 +223,14 @@ footer p {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    flex-basis: 70%;
   }
-  
+
   #add-book-form form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  #add-book-form input[type="text"] {
-    flex-basis: 70%;
   }
 
   #inpt-text {
@@ -238,7 +251,7 @@ footer p {
     flex-basis: 28%;
     margin-left: 54.4%;
   }
-  
+
   .desktop-nav {
     display: flex;
     justify-content: space-between;
@@ -281,22 +294,6 @@ footer p {
     border: 1px solid #ddd;
   }
 
-  form {
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-
-  label {
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-
-  input[type="text"] {
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-
   button {
     margin-bottom: 0;
   }
@@ -308,7 +305,6 @@ footer p {
   #time {
     margin-left: 85.4%;
   }
-  
 }
 
 .content-section {
