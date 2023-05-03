@@ -114,6 +114,11 @@ ul li a:hover {
   padding-bottom: 6%;
 }
 
+.align-rm-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
