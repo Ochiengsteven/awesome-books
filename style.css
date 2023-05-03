@@ -98,3 +98,28 @@ td {
     margin-bottom: 0;
   }
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5vh;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 2px solid #008080;
+  margin: 5px 10px 5px 10px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+ul li a {
+  text-decoration: none;
+  padding-right: 5px;
+  color: #008080;
+  border-right: 2px solid #008080;
+}
