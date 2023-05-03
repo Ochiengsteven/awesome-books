@@ -67,6 +67,11 @@ function showSection(sectionId) {
       section.classList.add('hidden');
     }
   });
+  if (sectionId === 'add-book-form') {
+    document.querySelector('#book-app').classList.add('add-book-form');
+  } else {
+    document.querySelector('#book-app').classList.remove('add-book-form');
+  }
 }
 
 navLinks.forEach((link) => {

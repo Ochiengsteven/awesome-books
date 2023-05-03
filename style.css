@@ -133,6 +133,14 @@ ul li a:hover {
   display: none;
 }
 
+#add-book-form {
+  display: none;
+}
+
+#add-book-form:not(.hidden) {
+  display: block;
+}
+
 .content-section:not(.hidden) {
   display: flex;
   flex-direction: column;
