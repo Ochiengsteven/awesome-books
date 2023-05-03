@@ -66,8 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- You can find the website [here]()
-- You can find the video presentation of this website [here]()
+- You can find the website [here](https://ochiengsteven.github.io/awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
