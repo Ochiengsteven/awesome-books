@@ -115,6 +115,7 @@ ul li a:hover {
 }
 
 .align-rm-btn {
+  text-decoration: none;
   display: flex;
   justify-content: flex-end;
 }
